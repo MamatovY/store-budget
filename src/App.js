@@ -1,9 +1,11 @@
-import './App.css';
+import './App.scss';
+import Table from './components/table';
 
 function App() {
+
   return (
     <div className="App">
-      <h1>Bismillah</h1>
+      <Table />
     </div>
   );
 }
