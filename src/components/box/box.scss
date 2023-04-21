@@ -1,12 +1,15 @@
 .box {
+    white-space: nowrap;
     border: 1px solid #292929;
     padding: 10px;
+    font-size: 0.9em;
 
     span {
         color: red;
     }
 
     input {
+        font-size: 0.9em;
         text-align: right;
         border: none;
         width: 80%;
