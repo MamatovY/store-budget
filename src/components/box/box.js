@@ -1,9 +1,14 @@
-import './box.scss'
+import React, { Component } from 'react';
+import './box.scss';
 
-const Box = ({ children }) => {
-    return (
-        <div className='box'>{children}</div>
-    )
+class Box extends Component {
+    render() {
+        const { children } = this.props;
+
+        return (
+            <div className='box'>{children}</div>
+        )
+    }
 }
 
-export default Box
+export default Box;
