@@ -2,10 +2,16 @@
     border: 1px solid #292929;
     padding: 10px;
 
+    span {
+        color: red;
+    }
+
     input {
+        text-align: right;
         border: none;
-        width: 80px;
+        width: 80%;
         outline: 0;
         padding: 0;
+        border-bottom: 1px solid #000;
     }
 }
