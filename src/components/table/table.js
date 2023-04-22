@@ -9,7 +9,6 @@ const Table = () => {
     let allTotal = 0
 
     useEffect(() => {
-
         axios.get('http://localhost:3001/stores')
             .then(res => setStores(res.data))
     }, [])
@@ -58,7 +57,6 @@ const Table = () => {
             <div className='table__stores'>
                 {
                     stores.map((store, i) => {
-
                         //Перебирает все месяцы и прибавляет их значение в total
                         const total = store.months.reduce((accumulator, currentValue) => {
                             return accumulator + currentValue.value;
