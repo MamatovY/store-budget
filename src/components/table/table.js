@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
 import './table.scss'
-import axios from 'axios'
 import Box from '../box'
+import data from './../../mock_stores.json'
+
 const Table = () => {
     //Не брал месяцы из полученных данных так как там может оказаться разные значение поэтому написал все месяцы сам
     const months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
@@ -9,8 +10,7 @@ const Table = () => {
     let allTotal = 0
 
     useEffect(() => {
-        axios.get('http://localhost:3001/stores')
-            .then(res => setStores(res.data))
+        setStores(data)
     }, [])
 
     const changeValue = (idStore, idMonth, value) => {//получает id магазина, id месяца, значение
