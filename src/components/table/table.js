@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './table.scss';
-import axios from 'axios';
 import Box from '../box';
+import data from './../../mock_stores.json'
 
 class Table extends Component {
     constructor(props) {
@@ -14,9 +14,7 @@ class Table extends Component {
 
 
     componentDidMount() {
-        axios.get('http://localhost:3001/stores').then(res => {
-            this.setState({ stores: res.data });
-        });
+        this.setState({ stores: data });
     }
 
     changeValue = (idStore, idMonth, value) => {
